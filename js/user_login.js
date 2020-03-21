@@ -4,11 +4,32 @@ var roll = ["16bce001","16bce002","16bce003","16bce004","16bce005","16bce006","1
 function getInfo(){
     var roll_number = document.getElementById("login").value
     console.log(roll_number)
-    for(i=0; i < roll.length; i++){
-        if(roll_number == roll[i]){
-            console.log("logged in")
-            window.location = "cse.html";
-        }
-        
-    } 
+    if(roll_number.includes("bce")){
+        console.log("logged in")
+        window.location = "./pages/cse.html";
+    }
+    else if(roll_number.includes("bec")){
+        console.log("logged in")
+        window.location = "./pages/ece.html";
+    }
+    else if(roll_number.includes("bme")){
+        console.log("logged in")
+        window.location = "./pages/me.html";
+    }
+    if(roll_number.includes("bic")){
+        console.log("logged in")
+        window.location = "./pages/ic.html";
+    }
+    if(roll_number.includes("bee")){
+        console.log("logged in")
+        window.location = "./pages/ee.html";
+    }
+    if(roll_number.includes("bch")){
+        console.log("logged in")
+        window.location = "./pages/chemical.html";
+    }
+    if(roll_number.includes("bcl")){
+        console.log("logged in")
+        window.location = "./pages/civil.html";
+    }
 }
